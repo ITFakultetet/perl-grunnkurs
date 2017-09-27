@@ -35,7 +35,6 @@ foreach my $str (sort { $ord{$a} <=> $ord{$b} or $a cmp $b } keys %ord) {
 	print $kofut_antall "$str,$ord{$str}\n";
 }
 
-
 print "Antall linjer i filen: $i \n";
 print "Antall unike ord i filen: ", scalar keys %ord,"\n";
 
