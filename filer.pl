@@ -37,6 +37,6 @@ foreach my $str (sort { $ord{$a} <=> $ord{$b} or $a cmp $b } keys %ord) {
 
 
 print "Antall linjer i filen: $i \n";
-print "Antall ord i filen: ", $ord.length;
+print "Antall unike ord i filen: ", scalar keys %ord,"\n";
 
 close $kof or die "Kunne ikke lukke $filnavn: $!";
