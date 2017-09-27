@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 
-my $filnavn = '/home/terje/Utvikling/perl/perl-grunnkurs-master/war-and-peace.txt';
+my $filnavn = "war-and-peace.txt";
 open my $kof, '<', $filnavn
   or die "Kan ikke åpne < $filnavn: $!";
 
