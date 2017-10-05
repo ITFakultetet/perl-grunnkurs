@@ -1,9 +1,10 @@
 #! /usr/bin/perl
 
-my $result = random_die_roll();
+# Dette er en enkel funksjon som kaster en terning
+my $result = random_terningkast();
 
-print $result;
+print "Terningkast: $result\n";
 
-sub random_die_roll {
+sub random_terningkast {
 return 1 + int( rand(6) );
 }
