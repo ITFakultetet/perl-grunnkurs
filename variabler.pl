@@ -39,8 +39,8 @@ pan hund
 ferdinand okse
 );
 
-
-for my $dyr (%dyr) {
+say "Dyr Sortert etter navn :";
+for my $dyr (sort keys %dyr) {
 say $dyr;
 };
 
@@ -50,7 +50,8 @@ my $to = 2;
 
 ($en, $to) = ($to, $en);
 
-print  qq($en + $to = ),($en+$to));
+# skriver ut 2 + 1 = 3
+say  qq($en + $to = ),($en+$to);
 
 
 

@@ -28,9 +28,6 @@ say $d;
 }
 
 
-
-
-
 sub frukt() {
 for my $f (@frukt) {
  say $f;
