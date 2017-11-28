@@ -50,7 +50,7 @@ my $to = 2;
 
 ($en, $to) = ($to, $en);
 
-say qq($en + $to) = qq($en,$to);
+print  qq($en + $to = ),($en+$to));
 
 
 
