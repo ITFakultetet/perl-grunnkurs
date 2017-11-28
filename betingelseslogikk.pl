@@ -1,6 +1,7 @@
 #! /usr/bin/perl
-use Switch;
-use feature ':all';
+use Switch;  # installer med: sudo cpan install Switch
+use feature ':all'; # få tilgang til bl.a. say
+
 my $tekst = "Dette er en tekst";
 my $tekst2 = "Dette er en tekst";
 
