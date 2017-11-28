@@ -7,8 +7,9 @@ open my $kof, '<', $filnavn
 my $i = 1;
 my %ord;
 
-while (my $line = <$kof>) {
-	chomp $line;
+while (my $Line = <$kof>) {
+	chomp $Line;
+  my $line = lc($Line);
 	foreach my $str($line =~ /\w+/g) {
 		$ord{$str}++;
 	}

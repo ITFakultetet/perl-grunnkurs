@@ -37,7 +37,7 @@ while (my $line=<$logfil>) {
   my ($host,$date,$url_with_method,$status,$size,$referrer,$agent) = $line =~
           m/^(\S+) - - \[(\S+ [\-|\+]\d{4})\] "(\S+ \S+ [^"]+)" (\d{3}) (\d+|-) "(.*?)" "([^"]+)"$/;
 
-  next unless $date =~ m#\d{1,2}/Feb/2002#;
+#  next unless $date =~ m#\d{1,2}/Feb/2002#;
 
   print $line unless $url_with_method;
   my ($method, $url, $http) = split /\s+/, $url_with_method;
