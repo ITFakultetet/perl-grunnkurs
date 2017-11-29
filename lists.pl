@@ -36,3 +36,6 @@ for my $f (@frukt) {
 
 
 
+foreach my $x (sort values %dyr) {
+  say $x;
+}

@@ -8,3 +8,8 @@ print "Terningkast: $result\n";
 sub random_terningkast {
 return 1 + int( rand(6) );
 }
+
+sub skrivut {
+
+
+}
