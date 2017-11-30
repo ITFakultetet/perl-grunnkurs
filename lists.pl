@@ -1,17 +1,29 @@
 #! /usr/bin/perl
 use strict;
-use feature ":all";
+use warnings;
+use feature ':all';
 
 my @frukt = qw(eple pære banan mango kiwi);
 
+say "Skriv ut arrayet";
 frukt();
 
 push @frukt,'appelsin';
 
 say '----------';
 
+say "Skriv ut etter at vi har lagt til en frukt";
+
 frukt();
 
+sub frukt() {
+  for my $f (@frukt) {
+    say $f;
+  }
+}
+
+say '----------';
+ say "Hash med navn-dyr";
 
 my %dyr = qw(
 Truls Katt
@@ -21,21 +33,28 @@ Ferdinand Okse
 Strofe Katt
 );
 
+# Hent nøkler og verdier til separate arrays.
+my @v = values %dyr;  #
+my @k = keys   %dyr;  #
 
-for my $d  (sort keys %dyr) {
-# skriv ut verdien til nøkkelen $d
-say $d;
+# Legg til et dyr i hash'en
+$dyr{'Mikke'} = "Mus";
+
+say "skriv ut nøklene (navn), sortert";
+for my $navn  (sort keys %dyr) {
+  say $navn;
 }
+say "------------";
 
-
-sub frukt() {
-for my $f (@frukt) {
- say $f;
-}
-}
-
-
-
+say "skriv ut verdiene (art) sortert";
 foreach my $x (sort values %dyr) {
   say $x;
 }
+say "------------";
+
+
+say "Skriv ut både nøkler og verdier";
+while ( my ($navn, $dyr) = each %dyr ) {
+  say $navn, " er en ", $dyr;
+}
+say "------------";
