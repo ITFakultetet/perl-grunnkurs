@@ -1,15 +1,15 @@
 #! /usr/bin/perl
 use feature ':all';
 say "Tast inn navnet ditt:";
-my $input = <STDIN>;
+my $input = <>;
 chomp $input;
 say "Navnet ditt har ",length($input), " bokstaver.";
 
 say "Tast inn et tall:";
-my $t1 = <STDIN>;
+my $t1 = <>;
 
 say "Tast inn et tall til:";
-my $t2 = <STDIN>;
+my $t2 = <>;
 
 chomp ($t1, $t2);
 
