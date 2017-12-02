@@ -52,9 +52,14 @@ foreach my $x (sort values %dyr) {
 }
 say "------------";
 
-
 say "Skriv ut både nøkler og verdier";
 while ( my ($navn, $dyr) = each %dyr ) {
-  say $navn, " er en ", $dyr;
+  say $navn, " er en ", $dyr;}
+say "------------";
+
+# Eller med en foreach
+say "Skriv ut nøkler og verdier med foreach";
+foreach my $navn (keys %dyr) {
+  say $navn, " er en ", $dyr{$navn};
 }
 say "------------";
