@@ -15,7 +15,7 @@ return 1 + int( rand(6) );
 }
 
 
-# Funksjon som lager et html-oppsett
+# Funksjon som lager et html-oppsett og tar imot parametre
 
 my $ny_html = lag_html("Dette er tittelen","Dette er innholdet på siden","navy","white");
 say "------------------------------------";
