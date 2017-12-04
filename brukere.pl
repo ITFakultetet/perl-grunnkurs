@@ -7,11 +7,9 @@ open my $brukerfil, '<', $filnavn
 my @brukere;
 
 while (my $Line = <$brukerfil>) {
-	chomp $Line;
-  say $Line;
-  push  @brukere , (split /:/, $Line)[0] ;
+	 push  @brukere , (split /:/, $Line)[0] ;
 }
 
 for my $bruker (@brukere) {
-say $bruker;  
+say $bruker;
 }
