@@ -1,21 +1,17 @@
 #! /usr/bin/perl
-
-
-
+use feature ':all';
 my $filnavn = "/etc/passwd";
-open my $brukere, '<', $filnavn
+open my $brukerfil, '<', $filnavn
   or die "Kan ikke åpne < $filnavn: $!";
 
-my $i = 1;
-my %ord;
+my @brukere;
 
-while (my $Line = <$kof>) {
+while (my $Line = <$brukerfil>) {
 	chomp $Line;
-  my $line = lc($Line);
-	foreach my $str($line =~ /\w+/g) {
-
-		$ord{$str}++;
-	}
-	$i++;
+  say $Line;
+  push  @brukere , (split /:/, $Line)[0] ;
 }
 
+for my $bruker (@brukere) {
+say $bruker;  
+}
