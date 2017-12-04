@@ -5,7 +5,7 @@ use feature ':all';
 
 my @host;
 
-open my $logfil, '<', '/var/log/httpd/access_log'
+open my $logfil, '<', '/var/log/apache2/access.log'
     or die "Kan ikke åpne: $!";
 
 

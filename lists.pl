@@ -63,3 +63,16 @@ foreach my $navn (keys %dyr) {
   say $navn, " er en ", $dyr{$navn};
 }
 say "------------";
+
+
+# mer kompleks hash som inneholder bl.a et array og en hash
+my %field = (
+NAME => "dyr",
+VALUES => ["camel", "llama", "ram", "wolf"],
+DEFAULT => "camel",
+LINEBREAK => "true",
+LABELS=> \%dyr
+);
+
+say $field{VALUES}[0];  # = camel
+say $field{LABELS}{Strofe};  #  = Katt
