@@ -8,7 +8,7 @@ my $i = 1;
 my %ord;
 
 while (my $Line = <$kof>) {
-	chomp $Line;
+chomp $Line;
   my $line = lc($Line);
 	foreach my $str($line =~ /\w+/g) {
 		$ord{$str}++;

@@ -52,7 +52,7 @@ say "Her er hele regnearket:";
 say "------------------------------";
 my @rows = Spreadsheet::Read::rows($book->[1]);
 foreach my $i (1 .. scalar @rows) {
-    foreach my $j (1 .. scalar @{$rows[$i-1]}) {
+    foreach my $j (1 .. scalar $rows[$i-1]}) {
         say chr(64+$i) . " $j " . ($rows[$i-1][$j-1] // '');
     }
 }
