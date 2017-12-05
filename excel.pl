@@ -18,7 +18,6 @@ my @tabell = (
 );
 my @data_for_kolonne = (10, 11, 12);
 
-
 $worksheet->write( "A1", "Hei Excel!" );
 $worksheet->write( "A2", "Rad 2" );
 

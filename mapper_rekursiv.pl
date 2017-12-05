@@ -1,26 +1,27 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
+use feature ':all';
 
 use Path::Tiny;
 
 my $dir = path('/home/terje/utvikling/perl','perl-grunnkurs'); # foo/bar
 
-mappeinnhold($dir);
+les_mappe($dir);
 
 # Bla igjennom innholdet i mappen
 
-sub mappeinnhold {
+sub les_mappe {
 my $iter = $_[0]->iterator;
 
 while (my $file = $iter->()) {
 
     # Sjekk om det er er en mappe
     if ($file->is_dir()) {
-      mappeinnhold($file);
+      les_mappe($file);
     }
 
-    # Print out the file name and path
-    print "$file\n";
+    # Skriv ut filnavn og sti til skjerm
+    say $file;
 }
 }
