@@ -43,7 +43,7 @@ close $fh2;
 
 sub lag_html {
 
-my $html = <<"end"
+return my $html = <<"end"
 <html>
 <head>
 <title>$_[0]</title>
